@@ -1,0 +1,90 @@
+/* Variables de color */
+:root {
+  --orange: #f97316;
+  --orange-light: #fed7aa;
+  --rose-light: #fecaca;
+  --text-dark: #1c1917;
+  --bg-light: #fff7ed;
+  --bg-dark: #1a1a1a;
+  --text-light: #fdf0e5;
+}
+
+/* Reset básico */
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* Navbar */
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:1rem 2rem;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+}
+
+body.dark .navbar {
+  background: rgba(30,30,30,0.7);
+}
+
+.logo {
+  font-size:1.8rem;
+  font-weight:bold;
+  color: var(--orange);
+}
+
+.nav-buttons button {
+  margin-left: 0.5rem;
+  padding:0.5rem 1rem;
+  border:none;
+  cursor:pointer;
+  border-radius:8px;
+}
+
+.btn-buy { background: var(--orange); color:white; }
+.btn-buy:hover { background: #ea580c; }
+
+#theme-toggle { background:none; font-size:1.2rem; }
+
+/* Hero */
+.hero { text-align:center; padding:4rem 2rem; }
+.hero h1 { font-size:3rem; margin-bottom:1rem; }
+.hero p { font-size:1.2rem; margin-bottom:2rem; }
+.hero-buttons button { margin:0.5rem; padding:0.8rem 1.5rem; border-radius:8px; cursor:pointer; border:none; }
+.btn { background: var(--orange); color:white; }
+.btn:hover { background:#ea580c; }
+.btn-outline { border:2px solid var(--orange); background:none; color:var(--orange); }
+.btn-outline:hover { background:var(--orange); color:white; }
+
+/* Colección */
+.collection { padding:2rem; text-align:center; }
+.collection h2 { font-size:2rem; margin-bottom:1.5rem; }
+.cards { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+.card { background:rgba(255,255,255,0.8); padding:1rem; border-radius:16px; width:200px; transition: transform 0.3s; }
+.card:hover { transform:translateY(-5px); }
+.card-color { height:80px; border-radius:12px; margin-bottom:0.5rem; }
+.color1 { background: var(--orange-light); }
+.color2 { background: var(--orange); }
+.color3 { background: var(--rose-light); }
+
+.card-buttons button { margin:0.3rem; padding:0.4rem 0.8rem; border-radius:8px; cursor:pointer; border:none; font-size:0.9rem; }
+.btn-small { background: var(--orange); color:white; }
+.btn-small:hover { background:#ea580c; }
+.btn-small-outline { border:1px solid var(--orange); background:none; color:var(--orange); }
+.btn-small-outline:hover { background:var(--orange); color:white; }
+
+/* Testimonial */
+.testimonial { text-align:center; padding:3rem 2rem; background:rgba(255,220,200,0.2); border-radius:16px; margin:2rem; }
+.testimonial button { margin-top:1rem; }
+
+/* Footer */
+footer { text-align:center; padding:1rem; font-size:0.9rem; color:gray; }
